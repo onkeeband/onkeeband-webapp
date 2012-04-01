@@ -1,0 +1,35 @@
+- @page_class = "profiles"
+
+- content_for :main_content do
+	%section#main.column.span-12.profiles
+		%h2.name.bottom Sonny May
+		%h3.title.bottom 
+			Drummer
+			%span.location Washington D.C. Band
+		
+		%p
+			= image_tag("profiles/sonny4.jpg", :alt => "Testing", :title => "", :class => 'append-bottom')
+			
+			%span.drop-cap S
+			onny’s musical journey began at age 16 and has taken quite the course. From his early years playing and singing in his hometown church in 
+			Boston, MA, Sonny eventually emerged on the entertainment scene both statewide and abroad. He has also become the consummate entertainer.
+		%p 
+			As a vocalist, Sonny became a member of numerous bands in the northeast corner of the States to include: Tommy Boy artist, Planet Patrol. He was 
+			featured in such bands as Hawkeye, Star, Masterpiece, and most recently Baltimore-based band, Trylogy.
+		%p 
+			Several years ago, Sonny utilized his talents and skills of playing drums and writing music, and began his own project known as the group Khemystry. 
+			Since then, Sonny joined On Kee Band and has continued to broaden his musical talents throughout the many venues the band played. A perfectionist 
+			in being a  drummer/entertainer, Sonny brings a myriad of experience to the band and has vowed to continue to support On Kee’s initiatives. Music 
+			is definitely Sonny’s life.
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		= render :partial => "shared/subscription_sidebar"
+				
+		= render :partial => "shared/dc_band_sidebar_nav"
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end

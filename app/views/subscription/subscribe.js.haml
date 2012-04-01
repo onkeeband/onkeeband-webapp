@@ -1,0 +1,10 @@
+- if @fan.valid?
+	- @fan.save
+	:plain
+		alert('Thanks for subscribing!!');
+		$('#subscription_form')[0].reset();
+- else
+	:plain
+		alert("Sorry. Please make sure this is a valid email address. Or this email address may already be in our system.");
+		
+	

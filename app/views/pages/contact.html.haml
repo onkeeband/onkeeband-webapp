@@ -1,0 +1,38 @@
+- @page_class = "contact"
+
+- content_for :main_content do
+	%section#main.column.span-12.contact
+		= image_tag("okb-contact8.jpg", :alt => "Testing", :title => "")
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		= render :partial => "shared/subscription_sidebar"
+		
+		%section#booking 
+			%h3 Booking Information
+				
+			%article.agent
+				%p.name.bottom Lenny McLean
+				%p.title.bottom Founder / Band Leader
+				%p.email.bottom Email: lenny@onkeeband.com
+				%p.phone Phone: (508) 740-2470
+
+			%article.agent
+				%p.name.bottom Anita Truitt
+				%p.title.bottom Executive Manager
+				%p.email.bottom Email: anita@onkeeband.com
+				%p.phone Phone: (443) 827-1693
+			
+			%article.agent
+				%p.name.bottom David Romaine
+				%p.title.bottom Manager
+				%p.email.bottom Email: david@onkeeband.com
+				%p.phone Phone: (201) 218-0743
+
+		
+end
+
+- content_for :page_heading do
+	%h2#page-heading.contact Contact Us
+end

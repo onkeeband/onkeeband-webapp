@@ -1,0 +1,53 @@
+- @page_class = "support"
+
+- content_for :main_content do
+	%section#main.column.span-18.support
+		%p#blurb 
+			The On Kee Jazz Band greatly appreciates the love and support from fans and those who have made it possible for the band to pursue the love of Jazz.
+			We therefore show our support to the following people and organizations helping to make our goals possible: 
+		%ul#supporters
+			%li 
+				%h3 Alphagraphics, Inc.
+				= image_tag("supporters/AG-logo.jpg")
+			%li 
+				%h3 Ray Gibson Photography
+				= image_tag("supporters/AG.png")
+			%li 
+				%h3 Sean and 37' Productions
+				= image_tag("supporters/AG.png")
+			%li 
+				%h3 David Skerritt Photography
+				= image_tag("supporters/AG.png")
+			%li 
+				%h3 Antwan Foster Consulting
+				= image_tag("supporters/AG.png")
+			%li 
+				%h3 Aenis Harris/ECC Clothing
+				= image_tag("supporters/AG.png")
+			%li 
+				%h3 Dr. Alan Comedy
+				= image_tag("supporters/AG.png")
+			%li 
+				%h3 Skip &amp; Nancy Noble
+				= image_tag("supporters/AG.png")
+			%li 
+				%h3 Class of BHS '84
+				= image_tag("supporters/AG.png")
+			%li 
+				%h3 On Kee Management
+				= image_tag("supporters/AG.png")
+end
+
+- content_for :page_heading do
+	%h2#page-heading.contact Contact Us
+end
+
+- content_for :fancy_box_js do
+	:javascript
+		$(window).load(function() {
+			$("a.history-sidebar-group").fancybox({
+				'transitionIn'	:	'elastic',
+				'transitionOut'	:	'elastic',
+			});
+		});
+end

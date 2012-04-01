@@ -1,0 +1,38 @@
+- @page_class = "profiles"
+
+- content_for :main_content do
+	%section#main.column.span-12.profiles
+		%h2.name.bottom Ralph &ldquo;Rhube&rdquo; Peters
+		%h3.title.bottom 
+			Saxophone 
+			%span.location Washington D.C. Band
+		
+		%p
+			= image_tag("profiles/rhube3.jpg", :alt => "Testing", :title => "", :class => 'append-bottom')
+			
+			%span.drop-cap R
+			alph Peters, better known as “Rhube,” is a native of Washington, D.C. and has spent the latter portion of his formative years at University of 
+			District of Columbia studying Music Theory, Arrangement, and the History of Music, just to name a few. Some of his mentors include the likes of 
+			Bobby Felder, Arthur Dawkins, Calvin Jones, and longtime friend, Bill Johnson.
+		%p 
+			Rhube has performed with a variety of local and nationally known popular names such as, Linda Jones, Baby Washington, Lee Edwards and The 
+			Continentals, The Orioles, Pookie Hudson, Little Royal, and Eddie Floyd. He is proficient in all of the woodwind instruments including Tenor, 
+			Alto, and Soprano Saxes, as well as the Flute.
+		%p 
+			For the past several years, Rhube has been a member of On Kee Band and has spent ample time in perfecting his craft so that he would help propel 
+			On Kee to its current status. Rhube is a true perfectionist in every thing he endeavors, and shoots a decent game of billiards, too!
+			
+			
+		
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		= render :partial => "shared/subscription_sidebar"
+				
+		= render :partial => "shared/dc_band_sidebar_nav"
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end

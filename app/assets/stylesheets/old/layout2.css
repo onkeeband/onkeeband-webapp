@@ -1,0 +1,106 @@
+/*============================================================================
+Layout Style Sheet
+
+Author:  Antwan Foster { Web Developer }
+E-mail:  Antwan3000@gmail.com
+website:  www.broadmedium.com
+
+Date:  September 12, 2010
+
+Desctiption:
+The CSS code is for the layout of XHTML elements for www.OnKeeBand.com
+=============================================================================*/
+
+#onkeeband {
+	width: 100%;
+	margin: 0 auto;
+	
+}
+#master-container {
+	width: 100%;
+	overflow: auto;
+	
+}
+#content-container, #footer-container {
+	width: 960px;
+	margin: 0 auto;	
+}
+#content-container {
+	background: transparent url('../images/onkee_test_1000px.png') no-repeat center center;
+	/*padding-bottom: 700px;*/
+}
+#footer-container {
+	width: 100%;
+	border-top: 6px solid #1a1a1a;
+}
+
+#masthead, #footer {
+	width: 100%;
+	float: left;
+}
+
+#masthead {
+	margin-top: 300px;
+}
+
+#masthead h1, #calendar {
+	float: left;
+	margin: 5px;
+}
+
+#masthead h1 {
+	width: 441px;/* 440px;*/
+	height: 204px; /*216px;*/
+	text-indent: -9999px;
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	background: transparent url('../images/onkee-branding7.png') no-repeat 0px 0px;
+}
+
+#calendar {
+	position: absolute;
+	top: 0px;
+	right: -100px;
+}
+#calendar h2 {
+	text-align: center;
+	padding-bottom: 5px;
+	border-bottom: 1px solid gray;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+#events li {
+	margin: 3px 0px;
+	font-size: 1.2em;
+}
+
+#footer {
+	clear: left;
+	margin-top: 460px;
+	text-align: center;
+}
+#copyright {
+	color: #999;
+	font-size: 1.2em;
+}
+
+.date {
+	color: #c5c5c5;
+	font-size: 1.3em;
+	font-weight: bold;
+	/*border-right: 1px solid #888;*/
+	margin-right: 2px;
+	padding-right: 2px;
+}
+.place {
+	color: #E1B74D;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-right: 2px;
+	padding-right: 2px;
+}
+.location {
+	color: #888;
+	font-size: 1.1em;
+}

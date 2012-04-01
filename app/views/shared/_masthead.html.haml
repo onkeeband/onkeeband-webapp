@@ -1,0 +1,8 @@
+#masthead
+	= link_to "<h1>On Kee Jazz Band</h1>".html_safe, root_path
+	
+	%blockquote#tagline
+		%p &ldquo;The Kee of life is how you play it...&rdquo;
+		%p -On Kee Band
+	
+	= render 'shared/primary_nav' if Rails.env == "development"

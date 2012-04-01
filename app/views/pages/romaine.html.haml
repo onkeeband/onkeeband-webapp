@@ -1,0 +1,26 @@
+- content_for :main_content do
+	%section#main.column.span-12.profiles
+		%h2.name.bottom David Romaine
+		%h3.title.bottom Assistant Manager
+		
+		%p 
+			= image_tag("profiles/anita2.jpg", :alt => "Testing", :title => "", :class => 'append-bottom')
+			
+			Bio information coming soon...
+			
+		
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		%section#newsletter 
+			%h3 Subscribe to OKB Newsletter
+			%p.bottom
+				Subscribe to the On Kee Band Newsletter 
+				and stay in the loop with upcoming 
+				events and whereabouts.
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end

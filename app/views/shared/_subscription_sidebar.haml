@@ -1,0 +1,15 @@
+%section#newsletter 
+	%h3.bottom Subscribe to the OKB Newsletter
+	%p.bottom
+		Subscribe to the On Kee Band Newsletter 
+		and stay in the loop with upcoming 
+		events and whereabouts.
+		
+	= form_for :subscription, :url => subscribe_url, :protocol => "http", :method => :post, :remote => true, :html => {:id => 'subscription_form'}  do |form|
+		= form.text_field :email, :size => 22, :maxlength => 50, :value => 'Your Email Address'
+		= form.submit "Subscribe"
+	
+	%p.small 
+		%span.red *
+		We will not sell or freely distribute your email address.
+	= image_tag 'spinner_trans2.gif', :id => 'spinner', :style => "display:none;position:absolute;top:70px;left:130px;"

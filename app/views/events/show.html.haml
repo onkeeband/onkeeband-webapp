@@ -1,0 +1,32 @@
+- content_for :main_content do
+	/ %p#notice notice
+
+	%p
+		%b Venue:
+		= @event.venue_name
+	%p
+		%b Date:
+		= @event.date
+	%p
+		%b Begin:
+		= @event.begin_time
+	%p
+		%b End:
+		= @event.end_time
+	%p
+		%b Url:
+		= @event.website_url
+	%p
+		%b Cover charge:
+		= @event.admission_type
+	%p
+		%b Notes:
+		= @event.notes
+	%p
+		%b Published:
+		= @event.published
+
+	= link_to 'Edit', edit_event_path(@event)
+	\|
+	= link_to 'Back', events_path
+end 

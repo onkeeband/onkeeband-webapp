@@ -1,0 +1,34 @@
+- @page_class = "profiles"
+
+- content_for :main_content do
+	%section#main.column.span-12.profiles
+		%h2.name.bottom Steve "The Truth" Williams
+		%h3.title.bottom 
+			Vocalist 
+			%span.location Featured Guest
+		
+		%p
+			= image_tag("profiles/steve4.jpg", :alt => "Testing", :title => "", :class => 'append-bottom')
+			
+			%span.drop-cap S
+			teve Williams, also known as &ldquo;The Truth&rdquo; was born in Trenton, NJ (home of instant funk). He started singing in church at age nine, alongside his 
+			mother, the late Anna Williams, and then began working with several bands from year 1995 until year 2000. 
+		%p 
+			Between years 2000-2004, his gifts and 
+			talents for strong vocal support landed him with singing sensations Joe and Patti Labelle. In year 2005, Steve sang in Atlantic City, NJ with 
+			Trenton groups the Plex Band, Amazing Grace, and GLB. Also in year 2005, Steve lost his mother to Cancer, and in the same year, he recorded his 
+			first club song with Plex Entertainment called “Gotta Give Thanks.” 
+		%p 
+			In 2009 he began working with the incomparable group, Phaze II until year 2011. His current hit single, “Can’t Wait” is with 
+			the Trenton Sessions on the Hershel Emerson project and is quickly climbing to the top of the charts. Steve is currently working with On Kee Jazz 
+			Band under the direction of Lenny McLean and is continuing to work on his professional singing career.
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		= render :partial => "shared/subscription_sidebar"
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end

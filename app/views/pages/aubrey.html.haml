@@ -1,0 +1,41 @@
+- @page_class = "profiles"
+
+- content_for :main_content do
+	%section#main.column.span-12.profiles
+		%h2.name.bottom Aubrey McKoy
+		%h3.title.bottom 
+			Bass Guitarist 
+			%span.location Washington D.C. Band
+		
+		%p
+			= image_tag("profiles/aubrey5.jpg", :alt => "Testing", :title => "", :class => 'append-bottom')
+			
+			%span.drop-cap A
+			ubrey McKoy also known to the band as &ldquo;Big Percy&rdquo;, first became interested in playing the Bass Guitar at the age of 13. Aubrey grew up in Harlem New York where he was influenced by 
+			many styles of music. This included R&B, Jazz and Latin music that play daily through the airways and in the streets. Aubrey was later introduced 
+			to Rock and Gospel music. Aubrey first learned to play by ear listening to music on the radio. He later had the benefit of the tutoring from 
+			Ramone Rodriguez, who worked as a music teacher at Boys Harbor in New York.
+		%p 
+			Aubrey went on to play in many young R&B groups and a college band (Unique Productions) made up of students at Boston College. Aubrey had his 
+			first recording opportunity playing with a Gospel Group in New York called Selwin Rawls and the Eternal light singers. Aubrey moved to the west 
+			coast, where he continued with his love of music and created a group with Jerome Rice called East Meets West, which performed in several clubs 
+			in the Los Angeles area.
+		%p 
+			He later moved again to Dallas, Texas, where he spiritually matured at Oak Cliff Bible Fellowship. Aubrey became a Praise Musician for the Church 
+			playing every Wednesday and Sunday. There, he met other musicians and became a member of a Gospel/Jazz Group called A Breath of Fresh Air. The 
+			group played at many Gospel events and dinner clubs for several years.  Aubrey is married and living in Southern Maryland. Aubrey met Lenny McLean 
+			through an old college friend, and now has joined him in continuing the On Kee Jazz Band music journey. It is a joy to find yourself through music 
+			and to find others who also share in this expression of yourself and love.
+			
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		= render :partial => "shared/subscription_sidebar"
+				
+		= render :partial => "shared/dc_band_sidebar_nav"
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end

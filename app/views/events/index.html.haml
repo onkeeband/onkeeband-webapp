@@ -1,0 +1,38 @@
+- content_for :main_content do
+	%h2 Shows
+	
+	%p#notice= notice
+	%p#error= notice
+
+	%table
+		%tr
+			%th Venue
+			%th Begin
+			%th End
+			%th Website
+			%th Admission
+			%th Notes
+			%th= "Published" if current_user
+			%th
+			%th
+			%th
+
+		- @events.each do |event|
+			%tr
+				%td= event.venue_name
+				%td= event.begin_time.to_s(:event_time)
+				%td= event.end_time.to_s(:event_time)
+				%td= event.website_url
+				%td= number_to_currency(event.price)
+				%td= event.notes
+				- if current_user
+					%td= event.published
+					%td= link_to 'Show', event
+					%td= link_to 'Edit', edit_event_path(event)
+					%td= link_to 'Remove', event, :confirm => 'Are you sure?', :method => :delete
+
+	%br
+
+	= link_to 'Add Show', new_event_path if current_user
+	= link_to 'Back', :back
+end

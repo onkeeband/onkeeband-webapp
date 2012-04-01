@@ -1,0 +1,174 @@
+- @page_class = "profiles"
+
+- content_for :main_content do
+	%section#main.column.span-18.profiles
+		%ul.tabs
+			%li= link_to "Band Management", "#tab1"
+			%li= link_to "Washington D.C. Band", "#tab2"
+			%li= link_to "Boston Band", "#tab3"
+			%li.last= link_to "Featured Guests", "#tab4"
+			
+		%article.tab_container
+			%section#tab1.tab_content				
+				%article.profile
+					%a{:href => "/management/lenny"}
+						= image_tag("profiles/lenny2-bw.jpg")
+						%footer
+							%h4.name.bottom Lenny McLean
+							%h5.title Founder / Band Leader
+				%article.profile
+					%a{:href => "/management/anita"}
+						= image_tag("profiles/anita3-bw.jpg")
+						%footer
+							%h4.name.bottom Anita Truitt
+							%h5.title Executive Manager
+				%article.profile
+					%a{:href => "#", :style => "cursor: default"}
+						= image_tag("profiles/david-r1-bw.jpg")
+						%footer
+							%h4.name.bottom David Romaine
+							%h5.title Manager
+				%p#blurb 
+					The band management team features a well rounded group of business professionals to help bring the sounds of the band to various venues and 
+					locations within the Washington, D.C., Maryland, Virginia (DMV) metro area, Boston metro area, and other locations along the Mid-Atlantic 
+					region and abroad.  Their cohesiveness and work ethic exemplifies their distinctive place within the entertainment industry striving for 
+					excellence with their drive, hard work, and dedication to ON KEE.
+						
+						
+			%section#tab2.tab_content
+			
+				%article.profile
+					%a{:href => "/washington-dc/aubrey"}
+						= image_tag("profiles/aubrey2-bw.jpg")
+						%footer
+							%h4.name.bottom Aubrey McKoy
+							%h5.title Bass Guitarist
+				%article.profile
+					%a{:href => "/washington-dc/cornell"}
+						= image_tag("profiles/cornell1-bw.jpg")
+						%footer
+							%h4.name.bottom Cornell Webb
+							%h5.title Drummer
+				%article.profile
+					%a{:href => "/washington-dc/rhube"}
+						= image_tag("profiles/rhube1-bw.jpg")
+						%footer
+							%h4.name.bottom Ralph "Rhube" Peters 
+							%h5.title Saxophone
+				%article.profile
+					%a{:href => "/washington-dc/david"}
+						= image_tag("profiles/david1-bw.jpg")
+						%footer
+							%h4.name.bottom David Dillard
+							%h5.title Percussionist
+				%article.profile
+					%a{:href => "/washington-dc/lenny"}
+						= image_tag("profiles/lenny2-bw.jpg")
+						%footer
+							%h4.name.bottom Lenny McLean
+							%h5.title Composer / Keyboardist
+				%p#blurb 
+					The D.C. band was formed several years ago with musicians mostly from Maryland.  On Kee now features their newest acquisition to the band, 
+					Mr. Cornell Webb on drums. The Washington D.C. band has an eclectic mix of talented musicians with a hint of D.C. flavor.  Overall, their 
+					unique style bridges the gap between Smooth Jazz and R&B producing a truly original sound for fans to enjoy live and in person.
+				
+				
+			%section#tab3.tab_content
+				
+				%article.profile
+					%a{:href => "#"}
+						= image_tag("profiles/greg1-bw.jpg")
+						%footer
+							%h4.name.bottom Greg Silva
+							%h5.title Bass Guitarist
+				%article.profile
+					%a{:href => "#"}
+						= image_tag("profiles/darren1-bw.jpg")
+						%footer
+							%h4.name.bottom Darren Fry
+							%h5.title Drummer
+				%article.profile
+					%a{:href => "#"}
+						= image_tag("profiles/rasheed1-bw.jpg")
+						%footer
+							%h4.name.bottom Rasheed Meadows
+							%h5.title Saxophone
+				%article.profile
+					%a{:href => "#"}
+						= image_tag("profiles/carl2-bw.jpg")
+						%footer
+							%h4.name.bottom Carl Parks
+							%h5.title Percussionist
+				%article.profile
+					%a{:href => "/boston/lenny"}
+						= image_tag("profiles/lenny2-bw.jpg")
+						%footer
+							%h4.name.bottom Lenny McLean
+							%h5.title Composer / Keyboardist
+
+				%p#blurb 
+					The origins of the Boston band include musicians from the Boston metropolitan area.  The Boston band also represents an eclectc style and mix of 
+					talented musicians.  Their distinct sound enriches the vibe of their audience  with their Smooth Jazz sound...	
+							
+							
+			%section#tab4.tab_content
+				
+				%article.profile
+					%a{:href => "#"}
+						= image_tag("profiles/michael1-bw.jpg")
+						%footer
+							%h4.name.bottom Michael Smith
+							%h5.title Trumpet
+				%article.profile
+					%a{:href => "http://www.rodneykelleymusic.com/", :target => "_blank"}
+						= image_tag("profiles/rodney1-bw.jpg")
+						%footer
+							%h4.name.bottom Rodney Kelley Sr.
+							%h5.title Electric Guitar
+				%article.profile
+					%a{:href => "http://www.loridow.com/", :target => "_blank"}
+						= image_tag("profiles/loridow1-bw.jpg")
+						%footer
+							%h4.name.bottom Lori Dow
+							%h5.title Vocals
+				%article.profile
+					%a{:href => "/featured-guest/steve"}
+						= image_tag("profiles/steve3-bw.jpg")
+						%footer
+							%h4.name.bottom Steve "The Truth" Williams
+							%h5.title Vocalist
+				%p#blurb 
+					A few of our featured guest appearances with On Kee includes some of the best in the industry.  We would like to extend our support 
+					for these artists above.  It is truly a pleasure to have them on stage performing with the band.
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end
+
+- content_for :tabbed_content do
+	
+	= javascript_include_tag 'tabbedContent'
+	
+	:javascript
+		$(document).ready(function() {
+
+			//When page loads...
+			$(".tab_content").hide(); //Hide all content
+			$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+			$(".tab_content:first").show(); //Show first tab content
+
+			//On Click Event
+			$("ul.tabs li").click(function() {
+
+				$("ul.tabs li").removeClass("active"); //Remove any "active" class
+				$(this).addClass("active"); //Add "active" class to selected tab
+				$(".tab_content").hide(); //Hide all tab content
+
+				var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+				$(activeTab).fadeIn(); //Fade in the active ID content
+				return false;
+			});
+
+		});
+end

@@ -1,0 +1,63 @@
+= simple_form_for @event do |f|
+  
+	= f.input :venue_name, :label => 'Venue Name'
+
+	=# f.input :date, :as => :date, :label => 'Date', :start_year => Time.now.year, :ampm => true, :order => [:month, :day, :year], :date_separator => "/", :prompt => true
+	
+	= f.input :date, :label => 'Date', :input_html => {:class => 'date-field'}
+	
+	= f.input :begin_time, :as => :time, :label => 'Begin Time', :minute_step => 15, :ampm => true, :prompt => true
+
+	= f.input :end_time, :as => :time, :label => 'End Time', :minute_step => 15, :ampm => true, :prompt => true
+	
+	= f.input :website_url, :label => 'Website URL'
+
+	= f.input :price, :label => 'Price', :input_html => {:class => 'short-field', :value => number_with_precision(f.object.price, :precision => 2)}
+
+	= f.input :admission_type, :label => 'Admission Type', :collection => Event::ADMISSION_TYPES.map, :prompt => "Select Admission"
+  	
+	= f.simple_fields_for :address do |addr_fields|
+ 
+		= addr_fields.input :first_line, :label => 'Address Line 1', :hint => "(e.g. Physical Street Address)"
+
+		= addr_fields.input :second_line, :label => 'Address Line 2', :hint => "(e.g. Bldg, Suite)"
+
+		= addr_fields.input :city, :label => 'City'
+
+		= addr_fields.input :state, :label => 'State / Province', :input_html => {:class => 'short-field', :maxlength => 2}
+
+		= addr_fields.input :country
+	
+	= f.input :private_event, :as => :boolean, :label =>'Private Occasion', :hint => "(Excludes street address and time displayed to public)"
+
+	= f.input :published, :as => :boolean, :label =>'Publish', :hint => "(Make available to the public)"
+
+	= f.input :notes, :as => :text, :label => 'Notes:', :input_html => {:size => "55x10"}
+
+	.actions
+		= link_to 'Cancel', events_path
+		= f.submit 'Save'
+	
+	:javascript
+		$(document).ready(function(){
+		
+			//// Create Date Picker 
+			$( "#event_date" ).datepicker({
+				dateFormat: "yy-mm-dd",
+				numberOfMonths: 2,
+				showOtherMonths: true,
+				selectOtherMonths: true,
+				showAnim: "drop",
+				showButtonPanel: true
+			});
+			
+			//// Create form buttons "Save", and "Cancel"
+			$( "input:submit, a", ".actions" ).button();
+			
+			//// Populate for Autocomplete of Recent Venues
+			var recentVenues = #{Event.all.distinct(:venue_name)} ;
+			$( "#event_venue_name" ).autocomplete({
+				source: recentVenues
+			});
+			
+		});

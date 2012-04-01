@@ -1,0 +1,38 @@
+- @page_class = "profiles"
+
+- content_for :main_content do
+	%section#main.column.span-12.profiles
+		%h2.name.bottom Anita Truitt
+		%h3.title.bottom Executive Manager
+		
+		%p 
+			= image_tag("profiles/anita2.jpg", :alt => "Testing", :title => "", :class => 'append-bottom')
+			
+			%span.drop-cap A
+			nita Truitt is a Baltimore, MD native and has lived in the Baltimore area all her life. Her family roots are in South Carolina and 
+			Tennessee, which helps to produces the southern hospitality in her demeanor. Although an avid On Kee Band supporter for over five years, Ms. 
+			Truitt was hired as On Kee band manager in April 2010. Since then, she has networked with various venues around the city and in Southern MD, 
+			Washington, DC and Northern VA, just to name a few. The most recent networking engagements have included Si Salsa Café & Grill and Club 347, both 
+			in Baltimore, MD.
+		%p 
+			Some accomplishments outside of her role as band manager include PTA team participation which landed a $13 million addition to the Woodlawn High 
+			School, year 2002. Blacks In Government (BIG) Meritorious Service Award for outstanding diversity support to the BIG organization presented in 
+			August 2006 in New York City and the Department of Defense first ever Equal Employment Opportunity and Diversity Award for
+			outstanding support in her agency’s initiatives to promote diversity, presented in October 2007.
+		%p 
+			In her spare time, she loves to write (poetry and short stories) and watch sports to include, football (an avid Ravens fan) basketball and beach 
+			volleyball. Her love for social networking and people-oriented engagements has her interested in politics as well.
+			
+		
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		= render :partial => "shared/subscription_sidebar"
+				
+		= render :partial => "shared/mgmt_sidebar_nav"
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end

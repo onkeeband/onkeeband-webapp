@@ -1,0 +1,47 @@
+- @page_class = "profiles"
+
+- content_for :main_content do
+	%section#main.column.span-12.profiles
+		%h2.name.bottom Lenny McLean
+		%h3.title.bottom Founder / Band Leader / Composer / Keyboardist
+		
+		%p.drop-cap
+			= image_tag("profiles/lenny7.jpg", :alt => "Testing", :title => "", :class => 'append-bottom')
+			%span.drop-cap J
+			ohn Lenny McLean, Boston, MA native, is a self taught composer and keyboardist and has captivated East-Coast audiences with his unique sound and 
+			charisma beginning in the early 1980’s. Showing extraordinary promise as a musician by the fourth grade, Lenny found himself continuing on with his 
+			endeavors in order to show himself approved.
+		%p 
+			Inspired by artists such as The Yellowjackets, Joe Sample, Miles Davis, George Duke, and many others, Lenny began his musical career as an organist 
+			with the Twelfth Baptist Church of Boston, Massachusetts. While there, he gained  encouragement and support from his father, thus giving him the 
+			confidence to broaden his musical talents and eventually become a jazz musician.
+		%p 
+			With the musical mentoring of an esteemed professor at Berklee College of Music, Frank Wilkins, his musical talents grew, and his interests blossomed. 
+			In 1993, Lenny co-founded On Kee Jazz Group in Boston with several music colleagues. The Group’ s musical triumphs include opening for two nationally 
+			recognized jazz artists, Jeff Lorber and Bob James at the G Clef Jazz Club in Providence, Rhode Island. They have been featured in the Metro West 
+			Daily News and the Boston Globe.
+		%p 
+			Lenny has also been honored by the Special Olympics for his dedication to their cause from 1997 to 2002, and Bridgewater State College for his 
+			achievements as a prestigious member of the Afro-American Alumni Association. Lenny has performed concerts in all of the major jazz clubs in Boston 
+			to include House of Blues, Ryles Jazz Club, the World Trade Center and the Legendary Connolley’s, which was known for featuring jazz legends such 
+			as John Coltrane. Now relocated in Maryland, Lenny has continued the tradition of performing in Boston and extends his musical talents to the jazz 
+			enthusiasts of the Washington Metropolitan Area.
+		%p 
+			&ldquo; The average listener and probably a few expert ones too would no doubt mistake the On Kee Jazz Ensemble as a group of professional musicians 
+			based on their tight groves and skills in improvisation &rdquo; 
+			%cite
+				– Boston Globe, November 2002
+		
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		= render :partial => "shared/subscription_sidebar"
+		
+		= render :partial => request.url =~ /management/ ? "shared/mgmt_sidebar_nav" : "shared/dc_band_sidebar_nav"
+			
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end

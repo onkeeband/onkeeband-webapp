@@ -1,0 +1,52 @@
+/*============================================================================
+Normalize Style Sheet
+
+Author:  Antwan Foster { Web Developer }
+E-mail:  Antwan3000@gmail.com
+website:  www.broadmedium.com
+
+Date:  September 12, 2010
+
+Desctiption:
+The CSS code is for normalization of XHTML elements for www.OnKeeBand.com
+=============================================================================*/
+
+
+/* Normalization of Elements
+================================================*/
+
+/* Normalizes margin, padding */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset,
+input, p, blockquote, th, td, tr
+{ margin: 0; padding: 0; }
+
+/* Normalizes font-size for headers */
+h1, h2, h3, h4, h5, h6 
+{ font-size: 100%; }
+
+/* Normalizes font-style and font-weight to normal */
+address, caption, cite, code, dfn, em, strong, th, var
+{ font-style: normal; font-weight: normal; }
+
+/* Removes list-style from lists */
+ol, ul
+{ list-style: none; }
+
+/* Removes double-border produced by each table cell or row or column */
+table 
+{ border-collapse: collapse; border-spacing: 0; }
+
+/*Left-aligns text in caption and th */
+caption, th
+{ text-align: left; }
+
+/* Removes border from fieldset and images (img) */
+fieldset, img 
+{ border: 0; }
+
+/* Removes quotation marks from q */
+q:before, q:after 
+{ content: ''; }
+a {
+	outline: none;
+}

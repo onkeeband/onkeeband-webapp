@@ -1,0 +1,16 @@
+.bundle
+.sass-cache/
+public/assets/
+app/assets/media
+app/assets/media/**/*
+public/media
+public/media/**/*
+db/*.sqlite3
+log/*.log
+tmp/**/*
+tmp/*
+doc/api
+doc/app
+*.swp
+*~
+.DS_Store

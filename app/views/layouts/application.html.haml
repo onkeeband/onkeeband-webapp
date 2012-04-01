@@ -1,0 +1,91 @@
+!!! 5
+%html
+	%head
+	
+		%meta{'http-equiv' => "content-type", :content => "text/html; charset=UTF-8"}/
+		%meta{'name' => 'keywords', :content => 'onkee jazz band On Kee Jazz Band OnKee Jazz Band OnKee Band Washington D.C. Jazz Boston Jazz Lenny McLean'}/
+		%meta{'name' => 'description', :content => 'On Kee Jazz Band'}/
+		%meta{'name' => 'google-site-verification', :content => "ixAK9ATqnMCnCUFvR4RirqPicLH81vrCyk_gk-5uLO0"}/
+		= csrf_meta_tag	
+		
+		~ "\n"
+		
+		%title= page_title.html_safe
+		
+		= stylesheet_link_tag 'screen', :media => "screen, projection"
+		= stylesheet_link_tag 'print', :media => "print"
+		%link{:href => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/overcast/jquery-ui.css", :rel => "stylesheet", :type => "text/css"}
+		= yield :extra_css
+		
+		/[if lte IE 8]			
+			:javascript
+				document.createElement('header');
+				document.createElement('nav');
+				document.createElement('section');
+				document.createElement('article');
+				document.createElement('aside');
+				document.createElement('details');
+				document.createElement('time');
+				document.createElement('footer');
+				
+			= stylesheet_link_tag 'ie', :media => "screen, projection"
+			
+		
+		= javascript_include_tag 'google_analytics' if Rails.env == "production"
+		= javascript_include_tag 'application'
+		= javascript_include_tag 'galleria'
+		= javascript_include_tag 'galleria.lightbox.js'
+		%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/jquery-ui.min.js"}
+				
+	%body#onkeeband{:class => @page_class}
+		%div#navigation.bottom
+			%div#nav-wrapper.container
+				= render :partial => "shared/primary_nav"
+					
+		%div#masthead.bottom
+			%div#masthead-wrapper.container
+				%section#logo
+					%a{:href => "/"} 
+						%h1.bottom On Kee Jazz Band
+				
+				%section#location
+					%h2.bottom Boston | Washington D.C.
+					%h3.bottom Metropolitan Area	
+				
+				=# For Homepage
+				= yield :band_photo_slide
+				= yield :tagline
+				
+				=# For Sub-Pages
+				= yield :page_heading
+				
+		%div#content.bottom
+			%div#content-wrapper.container
+				- flash.each do |name, msg|
+					= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+				
+				= yield :main_content
+				= yield :sidebar
+				=# yield
+							
+		%div#footer.bottom
+			%div#footer-wrapper.container
+				%p#copyright 
+					= "Copyright &copy; #{Time.now.year}  OnKeeBand.com, All rights reserved.".html_safe
+					
+				%p#social-media 
+					%a{:href => "http://www.facebook.com/pages/on-kee-jazz-band/89997459039", :target => "_blank"}
+						= image_tag("facebook_32-bw.png", :alt => "Testing", :title => "Facebook", :size => "32x32")
+					%a{:href => "http://www.twitter.com/onkee", :target => "_blank"}
+						= image_tag("twitter_32-bw.png", :alt => "Testing", :title => "Twitter", :size => "32x32")
+					%a{:href => "http://www.youtube.com/user/ONKEE2", :target => "_blank"}
+						= image_tag("youtube_32-bw.png", :alt => "Testing", :title => "YouTube", :size => "32x32")
+
+
+		= yield :audio_player_js
+		= yield :nivo_slider_js	
+		= yield :audio_playlist	
+		= yield :fancy_box_js
+		= yield :galleria_js
+		= yield :tabbed_content
+		= yield :jwplayer

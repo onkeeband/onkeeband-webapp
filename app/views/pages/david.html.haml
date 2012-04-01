@@ -1,0 +1,36 @@
+- @page_class = "profiles"
+
+- content_for :main_content do
+	%section#main.column.span-12.profiles
+		%h2.name.bottom David Dillard
+		%h3.title.bottom 
+			Percussionist 
+			%span.location Washington D.C. Band
+		
+		%p.drop-cap
+			= image_tag("profiles/david3.jpg", :alt => "Testing", :title => "", :class => 'append-bottom')
+			
+			%span.drop-cap D
+			avid Dillard, started playing percussion for the On Kee Jazz Band in 2007.  He was introduced to the conga and bongo when he lived in 
+			Miami Florida during the 1970s.  Dave later moved to the Washington D.C. area in the 1980s with his family to help open an art gallery named 
+			RAKU Art.  He later befriended his neighbor Aaron McCormick who played drums and also fellow band member Ralph &ldquo;Rhube&rdquo; Peters 
+			who plays saxophone. David continued to learn from the percussionist who played in the group with Aaron McCormick and Ralph Peters.  
+		%p	
+			He later became a percussionist after meeting with Chyp Davis from Kensington, MD.  They formed a group named Status and recorded their 
+			first album in 1982.  In 1993, Dillard was introduced to David Bouknight of Father's Creation, which led to his contributions
+			on the album called &ldquo;Give Your Life to God&rdquo;.  David continues to contribute to recordings in the studio 
+			with Bouknight. David went on the play with Keith Britt Project from 1997 through 2005, and helped formed the Metro Transit Band in 2006.  
+			David began playing at the Fish Market Restaurant in 2007, where he met fellow band member and founder of On Kee Jazz Band, Lenny McLean.  He has 
+			been playing with On Kee since their first encounter. 
+end
+
+- content_for :sidebar do
+	%aside#sidebar.history.column.span-6
+		= render :partial => "shared/subscription_sidebar"
+				
+		= render :partial => "shared/dc_band_sidebar_nav"
+end
+
+- content_for :page_heading do
+	%h2#page-heading.profiles Profiles & Bios
+end

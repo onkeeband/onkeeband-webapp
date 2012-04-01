@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<playlist>
+	<item>
+		<title>Positivity (2010)</title>
+		<artist>OnKee Band</artist>
+		<path>media/audio/home-playlist/song1.mp3</path>
+	</item>
+	<item>
+		<title>Live at Si Salsa Restaurant & Lounge</title>
+		<artist>OnKee Band</artist>
+		<path>media/audio/home-playlist/song2.mp3</path>
+	</item>
+	<item>
+		<title>Live at Ryles Jazz Club (Support for Lupus Foundation)</title>
+		<artist>OnKee Band</artist>
+		<path>media/audio/home-playlist/song3.mp3</path>
+	</item>
+</playlist>

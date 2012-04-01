@@ -1,0 +1,9 @@
+- content_for :main_content do 
+	%h1 Editing Show
+
+	= render 'form'
+
+	= link_to 'Show', @event
+	\|
+	= link_to 'Back', events_path
+end

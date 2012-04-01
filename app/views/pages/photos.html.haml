@@ -1,0 +1,48 @@
+- @page_class = "photos"
+
+- content_for :main_content do
+	%section#main.column.span-18.gallery
+		%div#set1
+			- (0..49).each do |number|
+				- photo_name = "%03d" % number
+				- file_url = "#{asset_path 'gallery/Set1/resized/'}" + photo_name
+				- thumb_url = "#{asset_path 'gallery/Set1/thumbs/'}" + photo_name
+				%a{:href => "#{file_url}.jpg"} <img style="display: none" src="#{thumb_url}_thumb.jpg">
+		%div.append-bottom#set1-gallery.thumbs
+end
+
+- content_for :page_heading do
+	%h2#page-heading.photos Photos
+end
+
+	
+- content_for :galleria_js do
+	= javascript_include_tag 'galleria'
+	
+	:javascript
+		// Load theme
+		//Galleria.loadTheme("#{asset_path 'galleria.lightbox.js'}");
+		$('#set1-gallery').galleria({
+			width: 600,
+			height: 600,
+			data_source: '#set1',
+			extend: function() {
+				this.bind(Galleria.LOADFINISH, function(e) {
+					$(e.imageTarget).click(this.proxy(function(e) {
+						e.preventDefault();
+						this.next();
+					}))
+				})
+			},
+			transition: 'slide',
+			transition_speed: 525,
+			thumb_crop: true,
+			keep_source: true,
+			lightbox: true,
+			data_config: function(img) {
+				return {
+					description: $(img).next('.caption').html()
+				}
+			}
+		});
+end
