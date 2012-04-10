@@ -1,0 +1,44 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+# $(document).ready(function(){
+# 
+# 	//// Create Date Picker 
+# 	$( "#event_date" ).datepicker({
+# 		dateFormat: "yy-mm-dd",
+# 		numberOfMonths: 2,
+# 		showOtherMonths: true,
+# 		selectOtherMonths: true,
+# 		showAnim: "drop",
+# 		showButtonPanel: true
+# 	});
+# 	
+# 	//// Create form buttons "Save", and "Cancel"
+# 	$( "input:submit, a", ".actions" ).button();
+# 	
+# 	//// Populate for Autocomplete of Recent Venues
+# 	var recentVenues = #{Event.all.distinct(:venue_name)} ;
+# 	$( "#event_venue_name" ).autocomplete({
+# 		source: recentVenues
+# 	});
+# 	
+# });
+
+$(document).ready -> 
+
+	#Create Date Picker
+	$("#event_date").datepicker
+		dateFormat: "yy-mm-dd",
+		numberOfMonths: 2,
+		showOtherMonths: true,
+		selectOtherMonths: true,
+		showAnim: "drop",
+		showButtonPanel: true
+		
+	#Create form buttons 'Save' and 'Cancel'
+	$("input:submit, a", ".actions").button()
+	
+	#Populate for Autocomplete of Recent Venues
+	recentValues = <%= "#{Event.all.distinct(:venue_name)}" %>
+	$("#event_venue_name").autocomplete
+			source: recentValues

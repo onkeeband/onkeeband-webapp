@@ -37,27 +37,4 @@
 	.actions
 		= link_to 'Cancel', events_path
 		= f.submit 'Save'
-	
-	:javascript
-		$(document).ready(function(){
 		
-			//// Create Date Picker 
-			$( "#event_date" ).datepicker({
-				dateFormat: "yy-mm-dd",
-				numberOfMonths: 2,
-				showOtherMonths: true,
-				selectOtherMonths: true,
-				showAnim: "drop",
-				showButtonPanel: true
-			});
-			
-			//// Create form buttons "Save", and "Cancel"
-			$( "input:submit, a", ".actions" ).button();
-			
-			//// Populate for Autocomplete of Recent Venues
-			var recentVenues = #{Event.all.distinct(:venue_name)} ;
-			$( "#event_venue_name" ).autocomplete({
-				source: recentVenues
-			});
-			
-		});
