@@ -89,8 +89,8 @@
 		<component name="playlist">
 			<settings>
 				<setting name="fontcolor" value="0x999999" />
-				<setting name="overcolor" value="0xFFCC44" />
-				<setting name="activecolor" value="0xFFFFFF" />
+				<setting name="overcolor" value="0xFFFFFF" />
+				<setting name="activecolor" value="0xFFCC44" />
 				<setting name="backgroundcolor" value="0x333333" />
 				<setting name="thumbs" value="false" />
 			</settings>
