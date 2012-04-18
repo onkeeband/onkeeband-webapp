@@ -12,5 +12,5 @@ end
 			= link_to '+', new_event_path, {:class => "plus-button"}
 			
 	%ol#events.listing-box
-		= render :partial => "shared/event", :collection => @events, :spacer_template => "event_divider"
+		= render :partial => "shared/event", :collection => @events
 end
