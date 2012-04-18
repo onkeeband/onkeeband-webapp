@@ -43,6 +43,8 @@ class Event
   validates :price, :format => {:with => PRICE_REGEX, :message => "must be a valid dollar amount."}, :allow_blank => true
   validate :event_date_not_in_past, :unless => "date.blank?"
   
+  paginates_per 5
+  
   def is_private?
     self.private_event
   end

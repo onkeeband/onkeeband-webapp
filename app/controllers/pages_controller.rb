@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   
   
   def home
-    @events = Event.published.ordered
+    @events = Event.published.ordered.limit(3)
   end
   
   def history

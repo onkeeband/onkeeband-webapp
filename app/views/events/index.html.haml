@@ -13,4 +13,6 @@ end
 			
 	%ol#events.listing-box
 		= render :partial => "shared/event", :collection => @events
+		
+	= paginate @events
 end

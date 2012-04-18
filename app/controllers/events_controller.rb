@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = current_user ? Event.ordered : Event.published.ordered
+    @events = current_user ? Event.ordered.page(params[:page]) : Event.published.ordered.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
