@@ -59,6 +59,9 @@ module Onkeeband
     config.generators do |g|
         g.view_specs false
         g.helper_specs false
-      end
+    end
+    
+    #config.to_prepare { Devise::SessionsController.ssl_exceptions }
+    #config.to_prepare { Devise::SessionsController.force_ssl }
   end
 end

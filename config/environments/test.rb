@@ -36,4 +36,12 @@ Onkeeband::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  ## Rails 3.2.3
+  # Raise exception on mass assignment protection for Active Record models
+  #config.active_record.mass_assignment_sanitizer = :strict
+  
+  SslRequirement.disable_ssl_check = true
+  # config.to_prepare { Devise::SessionsController.force_ssl }
+  # config.to_prepare { Devise::UsersController.force_ssl }
 end
