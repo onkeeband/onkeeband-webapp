@@ -16,6 +16,7 @@
 		= stylesheet_link_tag 'screen', :media => "screen, projection"
 		= stylesheet_link_tag 'print', :media => "print"
 		%link{:href => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.8/themes/overcast/jquery-ui.css", :rel => "stylesheet", :type => "text/css"}
+		%link{:href => "http://fonts.googleapis.com/css?family=Comfortaa|Federo|Kaushan+Script", :rel => "stylesheet", :type => "text/css"}
 		= yield :extra_css
 		
 		/[if lte IE 8]			
@@ -74,11 +75,15 @@
 					
 				%p#social-media 
 					%a{:href => "http://www.facebook.com/pages/on-kee-jazz-band/89997459039", :target => "_blank"}
-						= image_tag("facebook_32-bw.png", :alt => "Testing", :title => "Facebook", :size => "32x32")
+						= image_tag("facebook.png", :alt => "Testing", :title => "Facebook", :size => "48x48")
 					%a{:href => "http://www.twitter.com/onkee", :target => "_blank"}
-						= image_tag("twitter_32-bw.png", :alt => "Testing", :title => "Twitter", :size => "32x32")
+						= image_tag("twitter.png", :alt => "Testing", :title => "Twitter", :size => "48x48")
 					%a{:href => "http://www.youtube.com/user/ONKEE2", :target => "_blank"}
-						= image_tag("youtube_32-bw.png", :alt => "Testing", :title => "YouTube", :size => "32x32")
+						= image_tag("youtube.png", :alt => "Testing", :title => "YouTube", :size => "48x48")
+				%p#signature.right
+					%span Site Design by
+					%a{:href => "http://www.antwanfoster.com", :target => "_blank"}		
+						= image_tag("af-logo_150x64.png", :alt => "AntwanFoster.com", :title => "Designs by Antwan Foster", :size => "150x64")
 
 
 		= yield :audio_player_js

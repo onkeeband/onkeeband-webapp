@@ -2,142 +2,126 @@
 
 - content_for :main_content do
 	%section#main.column.span-18.home 
-		%section#media.span-9
-			%h2.bottom Our Media
+		%section#media.span-9.left
+			%h2 ONKEE Media
 			
-			%article#music
-				%header
-					%h3.gold.left.bottom Sounds Of
-					%h3.light.clearfix.bottom The Band
-				%p#player Sorry.  Your browser does not support flash-enabled applications
+			/ %article#music
+			/ 	%header
+			/ 		%h3.gold.left Sounds Of
+			/ 		%h3.light.clearfix The Band
+			/ 	%p#player Sorry.  Your browser does not support flash-enabled applications
 			%article#video
-				%header
-					%h3.gold.left.bottom Previous   
-					%h3.light.clearfix On Kee Footage
+				/ %header
+				/ 	%h3.gold.left Previous   
+				/ 	%h3.light.clearfix ONKEE Footage
 					
 				%div#video_player Loading the video player...
 				
-				
-				
-				/ %div.video-js-box
-				/ 					%ul#video-list
-				/ 						%li 
-				/ 							%h4.bottom "Impressions" (On Kee Style)
-				/ 							%h5 Reginald F. Lewis Museum | Baltimore, MD
-				/ 							%video{:id => "video1", :class => "video-js", :width => 480, :height => 272, :controls => "controls", :preload => "metadata", :poster => "#{root_url}images/video1-poster.png"}
-				/ 								%source{:src => "#{root_url}media/video/OKB-WebVideo-alt.theora.webm", :type => 'video/webm; codecs="vp8, vorbis"'}
-				/ 								%source{:src => "#{root_url}media/video/OKB-WebVideo-alt.theora.ogv", :type => 'video/ogg; codecs="theora, vorbis"'}
-				/ 								%source{:src => "#{root_url}media/video/OKB-WebVideo-alt.m4v", :type => 'video/mp4; codecs="avc1.42E01E, mp4v.40.2"'}
-				/ 						%li.last
-				/ 							
-				/ 							%h4.bottom "I Love You (by Donny Hathaway)" feat. Steve "The Truth" Williams 
-				/ 							%h5 L'Enfant Plaza Hotel | Washington, D.C.
-				/ 							%video{:id => "video2", :class => "video-js", :width => 480, :height => 272, :controls => "controls", :preload => "metadata", :poster => "#{root_url}images/video2-poster.png"}
-				/ 								%source{:src => "#{root_url}media/video/OKB-WebVideo2.theora.ogv", :type => 'video/ogg; codecs="theora, vorbis"'}
-				/ 								%source{:src => "#{root_url}media/video/OKB-WebVideo2.theora.webm", :type => 'video/webm; codecs="vp8, vorbis"'}
-				/ 								%source{:src => "#{root_url}media/video/OKB-WebVideo2.m4v", :type => 'video/mp4; codecs="avc1.42E01E, mp4v.40.2"'}
-				/ 						
-				/ %object{:id => "flash_fallback_1", :class => "vjs-flash-fallback", :width => 520, :height => 292, :type => "application/x-shockwave-flash", :data => "http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"}
-				/ 							%param{:name => "movie", :value => "http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"}
-				/ 							%param{:name => "allowfullscreen", :value => "true"}
-				/ 							%param{:name => "flashvars", :value => 'config={"playlist":["http://onkeeband.dev/images/slider-photo-1.jpg", {"src": "/media/video/OKB-WebVideo.m4v","autoPlay":false,"autoBuffering":true}]}'}
-
 		
-		%section#calendar.span-8.prepend-1.right
-			%h2.bottom Our Next Gig
+		%section#calendar.span-9.right
+			%h2 Our Next Gig
 		
-			%header
-				%h3.gold.left.bottom Come Experience
-				%h3.light.clearfix.bottom OnKee Live	
+			/ %header
+			/ 	%h3.gold.left Come Experience
+			/ 	%h3.light.clearfix ONKEE Live	
 									
 			%ol#events
-				%li
-					%time.date 
-						%span.dayname Wednesday
-						%span.month.gold Dec
-						%span.day.light 21
-					%aside.venue.light
-						%h4.gold.bottom 
-							%a{:href => "http://www.moulindeparismd.com/", :target => "_blank"} Moulin de Paris
-						%address	
-							%span.addr1 31 Magothy Beach Rd. Suite 105
-							%span.addr2 Pasadena, MD
-						%p
-							%span.time 2:00pm - 5:00pm
-							%span.note Private Event
-				%li
-					%time.date 
-						%span.dayname Friday
-						%span.month.gold Dec
-						%span.day.light 16
-					%aside.venue.light
-						%h4.gold.bottom 
-							%a{:href => "http://www.starwoodhotels.com/alofthotels/property/overview/index.html?propertyID=3050", :target => "_blank"} Aloft Hotel Arundel Mills
-						%address	
-							%span.addr1 7520 Teage Rd.
-							%span.addr2 Hanover, MD
-						%p
-							%span.time 7:00pm - 10:00pm
-							%span.note No Cover Charge
-				%li#next
-					%time.date 
-						%span.dayname Friday
-						%span.month.gold Dec
-						%span.day.light 09
-					%aside.venue.light
-						%h4.gold.bottom 
-							%a{:href => "http://bigeasylounge.webs.com/", :target => "_blank"} Big Easy Restaurant &amp; Lounge
-						%address	
-							%span.addr1 9820 Liberty Rd
-							%span.addr2 Randallstown, MD
-						%p
-							%span.time 8:30pm - 12:00am
-							%span.note Toy Drive held for children at Kennedy Krieger Institute <br> Please feel free to donate a toy for this special occasion.
-							%span.note Cover Charge: $5.00
-				%li
-					%time.date 
-						%span.dayname Saturday
-						%span.month.gold Oct
-						%span.day.light 08
-					%aside.venue.light
-						%h4.gold.bottom 
-							%a{:href => "http://www.rylesjazz.com", :target => "_blank"} Ryles Jazz Club
-						%address	
-							%span.addr1 212 Hampshire Street
-							%span.addr2 Cambridge, MA 
-						%p
-							%span.time 9:00pm - 12:00am
-							%span.note  7th Annual LUPUS Foundation Fundraiser
-							%span.note  Sponsored by The LUPUS Foundation of New England
-				%li
-					%time.date 
-						%span.dayname Sunday
-						%span.month.gold Sep
-						%span.day.light 25
-					%aside.venue.light
-						%h4.gold.bottom 
-							%a{:href => "http://www.sheraton.com/bwi", :target => "_blank"} BWI Sheraton Jazz Brunch
-						%address	
-							%span.addr1 1100 Old Elkridge Landing Road
-							%span.addr2 Linthicum Heights, MD 
-						%p
-							%span.time 11:00am - 2:00pm
-							%span.note  Feat. Cheryl Goodman from WEAA Radio 88.9 FM Baltimore
-							%span.note  Tickets: $25.00 advance -- $30.00 at door
-				%li
-					%time.date 
-						%span.dayname Thursday
-						%span.month.gold Aug
-						%span.day.light 11
-					%aside.venue.light
-						%h4.gold.bottom 
-							%a{:href => "http://www.eubieblake.org", :target => "_blank"} Eubie Blake Jazz & Cultural Center
-						%address	
-							%span.addr1 847 North Howard Street
-							%span.addr2 Baltimore, MD
-						%p
-							%span.time 6:00pm - 8:00pm
-							%span.note  Ghana African Mission Photo Exhibit by Tana Lopez
+				= render :partial => "shared/event", :collection => @events 
+				
+
+					
+					
+				/ %li
+				/ 	%time.date 
+				/ 		%span.dayname Wednesday
+				/ 		%span.month.gold Dec
+				/ 		%span.day.light 21
+				/ 	%aside.venue.light
+				/ 		%h4.gold.bottom 
+				/ 			%a{:href => "http://www.moulindeparismd.com/", :target => "_blank"} Moulin de Paris
+				/ 		%address	
+				/ 			%span.addr1 31 Magothy Beach Rd. Suite 105
+				/ 			%span.addr2 Pasadena, MD
+				/ 		%p
+				/ 			%span.time 2:00pm - 5:00pm
+				/ 			%span.note Private Event
+				/ %li
+				/ 	%time.date 
+				/ 		%span.dayname Friday
+				/ 		%span.month.gold Dec
+				/ 		%span.day.light 16
+				/ 	%aside.venue.light
+				/ 		%h4.gold.bottom 
+				/ 			%a{:href => "http://www.starwoodhotels.com/alofthotels/property/overview/index.html?propertyID=3050", :target => "_blank"} Aloft Hotel Arundel Mills
+				/ 		%address	
+				/ 			%span.addr1 7520 Teage Rd.
+				/ 			%span.addr2 Hanover, MD
+				/ 		%p
+				/ 			%span.time 7:00pm - 10:00pm
+				/ 			%span.note No Cover Charge
+				/ %li#next
+				/ 	%time.date 
+				/ 		%span.dayname Friday
+				/ 		%span.month.gold Dec
+				/ 		%span.day.light 09
+				/ 	%aside.venue.light
+				/ 		%h4.gold.bottom 
+				/ 			%a{:href => "http://bigeasylounge.webs.com/", :target => "_blank"} Big Easy Restaurant &amp; Lounge
+				/ 		%address	
+				/ 			%span.addr1 9820 Liberty Rd
+				/ 			%span.addr2 Randallstown, MD
+				/ 		%p
+				/ 			%span.time 8:30pm - 12:00am
+				/ 			%span.note Toy Drive held for children at Kennedy Krieger Institute <br> Please feel free to donate a toy for this special occasion.
+				/ 			%span.note Cover Charge: $5.00
+				/ %li
+				/ 	%time.date 
+				/ 		%span.dayname Saturday
+				/ 		%span.month.gold Oct
+				/ 		%span.day.light 08
+				/ 	%aside.venue.light
+				/ 		%h4.gold.bottom 
+				/ 			%a{:href => "http://www.rylesjazz.com", :target => "_blank"} Ryles Jazz Club
+				/ 		%address	
+				/ 			%span.addr1 212 Hampshire Street
+				/ 			%span.addr2 Cambridge, MA 
+				/ 		%p
+				/ 			%span.time 9:00pm - 12:00am
+				/ 			%span.note  7th Annual LUPUS Foundation Fundraiser
+				/ 			%span.note  Sponsored by The LUPUS Foundation of New England
+				/ %li
+				/ 	%time.date 
+				/ 		%span.dayname Sunday
+				/ 		%span.month.gold Sep
+				/ 		%span.day.light 25
+				/ 	%aside.venue.light
+				/ 		%h4.gold.bottom 
+				/ 			%a{:href => "http://www.sheraton.com/bwi", :target => "_blank"} BWI Sheraton Jazz Brunch
+				/ 		%address	
+				/ 			%span.addr1 1100 Old Elkridge Landing Road
+				/ 			%span.addr2 Linthicum Heights, MD 
+				/ 		%p
+				/ 			%span.time 11:00am - 2:00pm
+				/ 			%span.note  Feat. Cheryl Goodman from WEAA Radio 88.9 FM Baltimore
+				/ 			%span.note  Tickets: $25.00 advance -- $30.00 at door
+				/ %li
+				/ 	%time.date 
+				/ 		%span.dayname Thursday
+				/ 		%span.month.gold Aug
+				/ 		%span.day.light 11
+				/ 	%aside.venue.light
+				/ 		%h4.gold.bottom 
+				/ 			%a{:href => "http://www.eubieblake.org", :target => "_blank"} Eubie Blake Jazz & Cultural Center
+				/ 		%address	
+				/ 			%span.addr1 847 North Howard Street
+				/ 			%span.addr2 Baltimore, MD
+				/ 		%p
+				/ 			%span.time 6:00pm - 8:00pm
+				/ 			%span.note  Ghana African Mission Photo Exhibit by Tana Lopez
+				
+				
+				
+				
 				/ %li
 				/ 	%time.date 
 				/ 		%span.month.gold Aug
@@ -253,7 +237,6 @@ end
 			%div#slider.nivoSlider
 				= image_tag("slider-photos/slider-photo-5.png", :alt => "Testing", :title => "")
 				= image_tag("slider-photos/slider-photo-6.png", :alt => "Testing", :title => "")
-				= image_tag("slider-photos/slider-photo-2.jpg", :alt => "Testing", :title => "")
 				= image_tag("slider-photos/candid-group3.jpg", :alt => "Testing", :title => "")
 				= image_tag("slider-photos/hands-onkees.png", :alt => "Testing", :title => "")
 				= image_tag("slider-photos/candid-group2.jpg", :alt => "Testing", :title => "")
@@ -325,7 +308,6 @@ end
 		playlist: [
 			{ file: "#{asset_path 'video/OKB-video4.m4v'}", image: "#{asset_path 'video-poster.png'}", author: "On Kee", title: "On Kee - Let It Flow", description: "BWI Sheraton Hotel  |  Linthicum, MD", duration: "7:26" },
 			{ file: "#{asset_path 'video/OKB-video3.m4v'}", image: "#{asset_path 'video-poster.png'}", author: "On Kee", title: "On Kee - Butterfly", description: "BWI Sheraton Hotel  |  Linthicum, MD", duration: "11:50" },
-			{ file: "#{asset_path 'video/OKB-video5.m4v'}", image: "#{asset_path 'video-poster.png'}", author: "On Kee", title: "On Kee feat. Steve Williams  - I Love You", description: "BWI Sheraton Hotel  |  Linthicum, MD", duration: "7:15" },
 			{ file: "#{asset_path 'video/OKB-video1.m4v'}", image: "#{asset_path 'video-poster.png'}", author: "On Kee", title: "On Kee - Impressions (On Kee Style)", description: "Reginald F. Lewis Museum  |  Baltimore, MD", duration: "9:02" }
 		], 
 		"playlist.position": "bottom", 
@@ -337,8 +319,8 @@ end
 			}
 		},
 		volume: 50,
-		height: 500,
-		width: 520,
+		height: 425,
+		width: 485,
 		skin: "#{asset_path 'glow/glow.xml'}"
 		});
 end

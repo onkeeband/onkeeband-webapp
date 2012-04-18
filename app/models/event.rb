@@ -13,6 +13,12 @@ class Event
   field :notes,           :type => String
   field :private_event,   :type => Boolean, :default => false
   field :published,       :type => Boolean, :default => false
+  field :pub_date,        :type => Time
+  
+  scope :published, where(published: true)
+  scope :ordered, desc(:date)
+  
+  before_save :set_pubdate
   
   embeds_one :address
   
@@ -42,15 +48,25 @@ class Event
   end
   
   private
+  
+  def set_pubdate
+    if self.pub_date.nil? && self.published
+      self.pub_date = Time.now
+    elsif self.pub_date && !self.published
+      self.pub_date = nil
+    end
+  end
     
   def event_date_not_in_past
     errors.add(:date, "can't be in the past") if self.date < Date.yesterday
   end
   
   def begin_time_before_end_time
-    unless self.begin_time < self.end_time
-      errors.add(:begin_time, "can't be after event's End Time")
-      errors.add(:end_time, "can't be before event's Begin Time")
+    if self.begin_time > self.end_time
+      unless end_time.hour == 0 && end_time.min == 0
+        errors.add(:begin_time, "can't be after event's End Time")
+        errors.add(:end_time, "can't be before event's Begin Time")
+      end
     end
   end
 end

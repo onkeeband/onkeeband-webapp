@@ -1,6 +1,6 @@
 = simple_form_for @event do |f|
   
-	= f.input :venue_name, :label => 'Venue Name'
+	= f.input :venue_name, :label => 'Venue Name', :input_html => {:autofocus => "autofocus"}
 
 	=# f.input :date, :as => :date, :label => 'Date', :start_year => Time.now.year, :ampm => true, :order => [:month, :day, :year], :date_separator => "/", :prompt => true
 	

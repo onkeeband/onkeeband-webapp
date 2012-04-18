@@ -1,10 +1,12 @@
 class EventsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
+  ssl_exceptions :index
+  ssl_allowed :index
   
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = current_user ? Event.ordered : Event.published.ordered
 
     respond_to do |format|
       format.html # index.html.erb
