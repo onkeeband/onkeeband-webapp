@@ -41,7 +41,7 @@ When /^enter the following information for the event$/ do |table|
 end
 
 When %r{enter valid information for a private event} do
-  @event = Factory.build(:valid_event, :private_event => true)
+  @event = FactoryGirl.build(:valid_event, :private_event => true)
   fill_in 'Venue Name', :with => @event.venue_name
   fill_in 'Date', :with => @event.date
   

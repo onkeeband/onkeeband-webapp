@@ -58,7 +58,7 @@ end
 
 When /^I sign in as "(.*)\/(.*)"$/ do |email, password|
   @current_user = FactoryGirl.create(:admin)
-  step %{I am not logged in}
+  #step %{I am not logged in}
   step %{I go to the sign in page}
   step %{I fill in "Email" with "#{email}"}
   step %{I fill in "Password" with "#{password}"}
