@@ -7,6 +7,7 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 puts 'EMPTY THE MONGODB DATABASE'
 Mongoid.master.collections.reject { |c| c.name =~ /^system/}.each(&:drop)
+
 puts 'SETTING UP DEFAULT USER LOGIN'
 (1..2).each do |id|
   user = User.create! :name => "Name#{id}", :email => "user#{id}@example#{id}.com", :password => 'please', :password_confirmation => 'please'

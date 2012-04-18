@@ -2,9 +2,7 @@ Onkeeband::Application.routes.draw do
   
   resources :events, :path => "shows", :path_names => { :new => 'schedule', :edit => 'modify' }
 
-  get "users/show"
-
-  devise_for :users 
+  devise_for :users
   
   devise_scope :user do 
     get "/login" => "devise/sessions#new"
@@ -14,9 +12,7 @@ Onkeeband::Application.routes.draw do
   resources :users, :only => [:index, :show]
 
   post '/subscribe' => 'subscription#subscribe'
-  
   get '/unsubscribe/:scptn_hash' => 'subscription#unsubscribe'
-  
   get '/subscriptions' => 'subscription#index'
 
   # Static Pages
