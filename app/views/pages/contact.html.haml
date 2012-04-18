@@ -2,15 +2,15 @@
 
 - content_for :main_content do
 	%section#main.column.span-12.contact
-		= image_tag("okb-contact8.jpg", :alt => "Testing", :title => "")
+		= image_tag("okb-600x399.png", :class => "matted-photo", :alt => "On Kee Jazz Band", :title => "On Kee Jazz Band")
 end
 
 - content_for :sidebar do
 	%aside#sidebar.history.column.span-6
-		= render :partial => "shared/subscription_sidebar"
+		=# render :partial => "shared/subscription_sidebar"
 		
 		%section#booking 
-			%h3 Booking Information
+			%h3 Booking Contacts
 				
 			%article.agent
 				%p.name.bottom Lenny McLean
@@ -23,12 +23,15 @@ end
 				%p.title.bottom Executive Manager
 				%p.email.bottom Email: anita@onkeeband.com
 				%p.phone Phone: (443) 827-1693
-			
-			%article.agent
-				%p.name.bottom David Romaine
-				%p.title.bottom Manager
-				%p.email.bottom Email: david@onkeeband.com
-				%p.phone Phone: (201) 218-0743
+		
+		%section#promo
+			%h3 Promotion Package
+			= link_to "Price", "#"
+			/ %article.agent
+			/ 	%p.name.bottom David Romaine
+			/ 	%p.title.bottom Manager
+			/ 	%p.email.bottom Email: david@onkeeband.com
+			/ 	%p.phone Phone: (201) 218-0743
 
 		
 end
