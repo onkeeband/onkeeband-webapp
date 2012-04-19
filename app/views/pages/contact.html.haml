@@ -28,18 +28,10 @@ end
 		
 		%section#promo
 			%h3 Promotion Package
-			%p At your convenience, our promo package is available for download in two of the following formats:
-			=link_to "ONKEE Promo Pkg - Word format", download_promo_path(:doc_format => "word"), {:class => "icon word"}
+			%p At your convenience, our promo package is available for download in the following formats:
+			=link_to "ONKEE Promo Pkg - Word format", download_promo_path(:doc_format => "doc"), {:class => "icon word"}
 			=link_to "ONKEE Promo Pkg - PDF format", download_promo_path(:doc_format => "pdf"), {:class => "icon pdf"}
-			
-			
-			/ %article.agent
-			/ 	%p.name.bottom David Romaine
-			/ 	%p.title.bottom Manager
-			/ 	%p.email.bottom Email: david@onkeeband.com
-			/ 	%p.phone Phone: (201) 218-0743
 
-		
 end
 
 - content_for :page_heading do
