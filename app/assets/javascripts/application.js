@@ -13,6 +13,7 @@
 //= require tabbedContent.js 
 //= require galleria.js 
 //= require galleria.lightbox.js  
+//= require jquery.nivo.slider.pack.js
 
 
 // $(document).ready(function() {

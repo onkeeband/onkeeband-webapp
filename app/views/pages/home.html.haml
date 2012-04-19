@@ -252,7 +252,7 @@ end
 end
 
 - content_for :extra_css do
-	= stylesheet_link_tag 'nivo-slider', :media => "screen, projection"
+	=# stylesheet_link_tag 'nivo-slider', :media => "screen, projection"
 	=# stylesheet_link_tag 'video-js', :media => "screen, projection", :title => "Video JS"
 end
 
@@ -268,7 +268,7 @@ end
 
 - content_for :audio_player_js do 
 	
-	= javascript_include_tag 'audio-player'
+	=# javascript_include_tag 'audio-player'
 	%script{:async => true, :defer => true}
 		AudioPlayer.setup("#{asset_path 'player.swf'}", {width: 290});
 end
@@ -297,7 +297,7 @@ end
 
 - content_for :jwplayer do 
 	
-	= javascript_include_tag 'jwplayer'
+	=# javascript_include_tag 'jwplayer'
 	
 	:javascript		
 		jwplayer("video_player").setup({

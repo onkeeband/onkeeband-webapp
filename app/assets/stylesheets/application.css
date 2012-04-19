@@ -8,5 +8,6 @@
  *= require forms
  *= require grid
  *= require layout
+ *= require nivo-slider
  *= require galleria.lightbox
 */
