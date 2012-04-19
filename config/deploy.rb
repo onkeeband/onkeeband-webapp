@@ -85,10 +85,11 @@ namespace :media do
   task :setup, :roles => :app, :except => { :no_release => true }  do
     run "mkdir -p #{shared_path}/media/audio/home-playlist"
     run "mkdir -p #{shared_path}/media/video"
-    run "mkdir -p #{shared_path}/media/docs"
+    run "mkdir -p #{shared_path}/docs"
   end
   task :symlink, :roles => :app, :except => { :no_release => true }  do
     run "ln -nfs #{shared_path}/media #{release_path}/public/media"
+    run "ln -nfs #{shared_path}/docs #{release_path}/public/docs"
   end
 end
 

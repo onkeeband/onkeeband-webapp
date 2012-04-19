@@ -51,6 +51,8 @@ module Onkeeband
     config.assets.enabled = true
     
     config.assets.paths << File.join(Rails.root, 'app', 'assets', 'fancybox')
+    config.assets.paths << File.join(Rails.root, 'app', 'assets', 'media')
+    config.assets.paths << File.join(Rails.root, 'app', 'assets', 'docs')
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

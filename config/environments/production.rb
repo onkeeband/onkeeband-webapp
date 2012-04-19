@@ -44,7 +44,7 @@ Onkeeband::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-  config.assets.precompile += %w( swf audio/* video/*.m4v docs/* gallery/** audio-player.js jwplayer.js swfobject.js tabbedContent.js google_analytics.js galleria.js galleria.lightbox.js galleria.lightbox.css jquery.nivo.slider.pack.js nivo-slider.css )
+  config.assets.precompile += %w( swf media/* docs/* audio/* video/*.m4v docs/* gallery/** audio-player.js jwplayer.js swfobject.js tabbedContent.js google_analytics.js galleria.js galleria.lightbox.js galleria.lightbox.css jquery.nivo.slider.pack.js nivo-slider.css )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
