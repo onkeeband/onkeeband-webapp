@@ -6,7 +6,7 @@
 			- (0..49).each do |number|
 				- photo_name = "%03d" % number
 				- file_fullpath = "gallery/Set1/resized/#{photo_name}"
-				- file_url = asset_path photo_fullpath
+				- file_url = asset_path file_fullpath
 				- thumb_fullpath = "gallery/Set1/thumbs/#{photo_name}"
 				- thumb_url = asset_path thumb_fullpath
 				%a{:href => file_url} <img style="display: none" src="#{thumb_url}">
