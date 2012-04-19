@@ -472,8 +472,7 @@ section.profiles h2 {line-height: 1em; padding: 0; margin: 0}
 #main article.profile footer h5.title { font-weight: 300; font-size: 1.1em; color: #eee; margin-bottom: 10px; padding: 0}
 article.profile a {text-decoration: none}
 article.profile a:hover img {background-color: #c3c3c3;}
-#booking article.agent p {font-size: 1.3em; font-weight: 300; color: #eee}
-#booking article.agent p.name {font-size: 1.6em; font-weight: bold}
+
 
 /*SUPPORT*/
 #main.support p {color: #ddd; font-size: 1.5em}
@@ -486,6 +485,10 @@ body div.thumbs .galleria-thumbnails .galleria-image { width:95px; height: 95px;
 body div.thumbs .galleria-thumbnails .galleria-image:hover { background-color: #ffcc33}
 
 /*CONTACT*/
+#booking article.agent {position: relative;}
+#booking article.agent p, #promo p {font-size: 1.3em; font-weight: 300; color: #eee}
+#booking article.agent p.name {font-size: 1.6em; font-weight: bold}
+#booking article.agent a.icon {position: absolute; top: 0px; right: 70px;}
 img.matted-photo {
 	border-radius: 3px;
 	padding: 10px;
@@ -531,3 +534,14 @@ img.matted-photo {
 	a {text-decoration: none}
 	img {padding: 0;}
 }
+
+/*ICONS*/
+a.icon {width: 48px; line-height: 48px; margin: 5px; text-indent: -9999px; float: left;}
+a.pdf {background: transparent url(<%= asset_path 'pdf.png' %>) no-repeat center center}
+a.word {background: transparent url(<%= asset_path 'ms-word.png' %>) no-repeat center center}
+a.vcard {background: transparent url(<%= asset_path 'vcard.png' %>) no-repeat center -10px;}
+
+
+
+
+

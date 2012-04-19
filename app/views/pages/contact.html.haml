@@ -6,7 +6,7 @@
 end
 
 - content_for :sidebar do
-	%aside#sidebar.history.column.span-6
+	%aside#sidebar.contact.column.span-6
 		=# render :partial => "shared/subscription_sidebar"
 		
 		%section#booking 
@@ -17,16 +17,22 @@ end
 				%p.title.bottom Founder / Band Leader
 				%p.email.bottom Email: lenny@onkeeband.com
 				%p.phone Phone: (508) 740-2470
+				=link_to "Lenny McLean - Vcard Download", asset_path("onkeeband-lenny.vcf"), {:class => "icon vcard"}
 
 			%article.agent
 				%p.name.bottom Anita Truitt
 				%p.title.bottom Executive Manager
 				%p.email.bottom Email: anita@onkeeband.com
 				%p.phone Phone: (443) 827-1693
+				=link_to "Anita Truitt - Vcard Download", asset_path("onkeeband-anita.vcf"), {:class => "icon vcard"}
 		
 		%section#promo
 			%h3 Promotion Package
-			= link_to "Price", "#"
+			%p At your convenience, our promo package is available for download in two of the following formats:
+			=link_to "ONKEE Promo Pkg - Word format", asset_path("onkeeband-promo-pkg.doc"), {:class => "icon word"}
+			=link_to "ONKEE Promo Pkg - PDF format", asset_path("onkeeband-promo-pkg.pdf"), {:class => "icon pdf"}
+			
+			
 			/ %article.agent
 			/ 	%p.name.bottom David Romaine
 			/ 	%p.title.bottom Manager
