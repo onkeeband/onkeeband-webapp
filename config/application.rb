@@ -55,6 +55,7 @@ module Onkeeband
     # config.assets.paths << File.join(Rails.root, 'app', 'assets', 'docs')
     config.assets.paths << File.join(Rails.root, 'public', 'docs')
     config.assets.paths << File.join(Rails.root, 'public', 'media')
+    config.assets.paths << File.join(Rails.root, 'public', 'media', 'gallery', 'Set1')
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
