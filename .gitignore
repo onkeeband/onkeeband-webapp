@@ -1,8 +1,12 @@
 .bundle
 .sass-cache/
 public/assets/
+app/assets/docs
+app/assets/docs/**/*
 app/assets/media
 app/assets/media/**/*
+public/docs
+public/docs/**/*
 public/media
 public/media/**/*
 db/*.sqlite3
