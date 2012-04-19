@@ -1,3 +1,4 @@
+//= require google_analytics.js 
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.autocomplete
@@ -6,6 +7,13 @@
 //= require jquery.effects.drop
 //= require jquery.ui.button
 //= require events
+//= require audio-player.js 
+//= require jwplayer.js 
+//= require swfobject.js 
+//= require tabbedContent.js 
+//= require galleria.js 
+//= require galleria.lightbox.js  
+//= require jquery.nivo.slider.pack.js
 
 
 // $(document).ready(function() {
