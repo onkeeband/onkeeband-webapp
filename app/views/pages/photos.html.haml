@@ -5,9 +5,9 @@
 		%div#set1
 			- (0..49).each do |number|
 				- photo_name = "%03d" % number
-				- file_fullpath = "gallery/Set1/resized/#{photo_name}"
+				- file_fullpath = "gallery/Set1/resized/#{photo_name}.jpg"
 				- file_url = asset_path file_fullpath
-				- thumb_fullpath = "gallery/Set1/thumbs/#{photo_name}"
+				- thumb_fullpath = "gallery/Set1/thumbs/#{photo_name}.jpg"
 				- thumb_url = asset_path thumb_fullpath
 				%a{:href => file_url} <img style="display: none" src="#{thumb_url}">
 		%div.append-bottom#set1-gallery.thumbs
