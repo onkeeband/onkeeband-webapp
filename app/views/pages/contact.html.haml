@@ -17,20 +17,20 @@ end
 				%p.title.bottom Founder / Band Leader
 				%p.email.bottom Email: lenny@onkeeband.com
 				%p.phone Phone: (508) 740-2470
-				=link_to "Lenny McLean - Vcard Download", asset_path("onkeeband-lenny.vcf"), {:class => "icon vcard"}
+				=link_to "Lenny McLean - Vcard Download", download_vcard_path(:band_member => "lenny"), {:class => "icon vcard"}
 
 			%article.agent
 				%p.name.bottom Anita Truitt
 				%p.title.bottom Executive Manager
 				%p.email.bottom Email: anita@onkeeband.com
 				%p.phone Phone: (443) 827-1693
-				=link_to "Anita Truitt - Vcard Download", asset_path("onkeeband-anita.vcf"), {:class => "icon vcard"}
+				=link_to "Anita Truitt - Vcard Download", download_vcard_path(:band_member => "anita"), {:class => "icon vcard"}
 		
 		%section#promo
 			%h3 Promotion Package
 			%p At your convenience, our promo package is available for download in two of the following formats:
-			=link_to "ONKEE Promo Pkg - Word format", asset_path("onkeeband-promo-pkg.doc"), {:class => "icon word"}
-			=link_to "ONKEE Promo Pkg - PDF format", asset_path("onkeeband-promo-pkg.pdf"), {:class => "icon pdf"}
+			=link_to "ONKEE Promo Pkg - Word format", download_promo_path(:doc_format => "word"), {:class => "icon word"}
+			=link_to "ONKEE Promo Pkg - PDF format", download_promo_path(:doc_format => "pdf"), {:class => "icon pdf"}
 			
 			
 			/ %article.agent

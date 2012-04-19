@@ -56,6 +56,10 @@ Onkeeband::Application.routes.draw do
     
   end
   
+  # Downloads
+  get 'download/vcard' => 'file#vcard'
+  get 'download/promo' => 'file#promo_pkg'
+  
   
   # Homepage
   root  :to => "pages#home", :via => :get
