@@ -48,7 +48,6 @@ Onkeeband::Application.routes.draw do
     
     scope '/featured-guest' do
       get 'michael'     => 'pages#michael'
-      get 'steve'     => 'pages#steve'
     end
     
     # scope '/guests' do
