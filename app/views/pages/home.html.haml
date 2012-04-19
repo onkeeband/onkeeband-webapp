@@ -285,15 +285,15 @@ end
 		});
 end
 
-- content_for :video_js do 
-	
-	= javascript_include_tag 'video-js'
-	
-	:javascript
-		$(window).load(function() {
-			VideoJS.setupAllWhenReady();
-		});
-end
+/ - content_for :video_js do 
+/ 	
+/ 	= javascript_include_tag 'video-js'
+/ 	
+/ 	:javascript
+/ 		$(window).load(function() {
+/ 			VideoJS.setupAllWhenReady();
+/ 		});
+/ end
 
 - content_for :jwplayer do 
 	
