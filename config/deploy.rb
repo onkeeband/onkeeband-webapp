@@ -16,7 +16,7 @@ require 'bundler/capistrano'
 #############################################################
 #    Database Bootstrap Settings
 ##############################################################
-require File.expand_path('../database_deploy.rb', __FILE__)
+# require File.expand_path('../database_deploy.rb', __FILE__)
 
 
 #############################################################
@@ -85,6 +85,7 @@ namespace :media do
   task :setup, :roles => :app, :except => { :no_release => true }  do
     run "mkdir -p #{shared_path}/media/audio/home-playlist"
     run "mkdir -p #{shared_path}/media/video"
+    run "mkdir -p #{shared_path}/media/docs"
   end
   task :symlink, :roles => :app, :except => { :no_release => true }  do
     run "ln -nfs #{shared_path}/media #{release_path}/public/media"
