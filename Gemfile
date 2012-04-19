@@ -13,11 +13,9 @@ group :development do
   gem "ruby-debug19"
 end
 
-group :production do
-  gem "execjs"
-  gem "therubyracer"
-end
 
+gem "execjs"
+gem "therubyracer"
 gem "jquery-rails"
 gem "jquery-ui-rails"
 gem "rspec-rails", 			">= 2.9.0", :group => [:development, :test]
