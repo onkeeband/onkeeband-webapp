@@ -10,5 +10,5 @@
  *= require layout
  *= require nivo-slider
  *= require galleria.lightbox
- *= jquery.fancybox-1.3.4.css
+ *= require jquery.fancybox-1.3.4.css
 */
