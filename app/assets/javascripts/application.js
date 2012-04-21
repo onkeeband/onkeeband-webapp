@@ -11,7 +11,6 @@
 // = require jwplayer.js 
 // = require swfobject.js 
 // = require tabbedContent.js 
-// = require galleria.lightbox.js
 // = require galleria.js   
 // = require jquery.nivo.slider.pack.js
 // = require tabbedContent
