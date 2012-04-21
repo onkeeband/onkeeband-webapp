@@ -59,6 +59,8 @@ Onkeeband::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
-  config.to_prepare { Devise::SessionsController.force_ssl }
+  config.force_ssl = true
+  
+  #config.to_prepare { Devise::SessionsController.force_ssl }
   # config.to_prepare { Devise::UsersController.force_ssl }  
 end

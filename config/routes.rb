@@ -2,7 +2,7 @@ Onkeeband::Application.routes.draw do
   
   resources :events, :path => "shows", :path_names => { :new => 'schedule', :edit => 'modify' }
 
-  devise_for :users
+  devise_for :user
   
   devise_scope :user do 
     get "/login" => "devise/sessions#new"
