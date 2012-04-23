@@ -12,7 +12,7 @@ puts 'SETTING UP DEFAULT USER LOGIN'
 (1..2).each do |id|
   user = User.create! :name => "Name#{id}", :email => "user#{id}@example#{id}.com", :password => 'please', :password_confirmation => 'please'
   puts 'New user created: ' << user.name
-  puts 'User email' << user.email
+  puts 'User email: ' << user.email
 end
 
 
