@@ -9,6 +9,6 @@
  *= require grid
  *= require layout
  *= require nivo-slider
- *= require galleria.lightbox
  *= require jquery.fancybox-1.3.4
+ *= require galleria.lightbox
 */

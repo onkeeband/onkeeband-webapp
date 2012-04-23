@@ -24,10 +24,14 @@
 			%p.state= ", #{event.address.state}" if event.address.state
 			%p.country= event.address.country if !Address::STATE_COUNTRIES.include?(event.address.country)
 		%footer.clear
-			%p.notes= event.notes
-			%p.cost
-				%span= "#{(event.admission_type == "cover"? "Cover Charge" : "Tickets")}:"
-				%span= "#{event.price > 0.0? number_to_currency(event.price) : " Free"}"
+			- unless event.private_event
+				%p.notes= event.notes
+				%p.cost
+					%span= "#{(event.admission_type == "cover"? "Cover Charge" : "Tickets")}:"
+					%span= "#{event.price > 0.0? number_to_currency(event.price) : " Free"}"
+			- else
+				%p.notes Private Event
+				
 			- if current_user && controller.controller_name == "events"
 				%p.admin
 					%span= link_to 'Show', event

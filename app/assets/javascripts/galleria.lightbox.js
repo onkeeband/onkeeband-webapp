@@ -45,7 +45,7 @@ Galleria.addTheme({
     name: 'lightbox',
     author: 'Galleria',
     version: '1.1',
-    css: '/assets/galleria.lightbox.css',
+    css: false,
     defaults: {
         carousel: false,
         transition: 'lightbox',
