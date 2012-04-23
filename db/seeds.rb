@@ -20,12 +20,12 @@ end
 EVENTS = [
           {:venue_name => "Atlantic City Multicultural Festival", :date => Time.new(2012,06,03).to_s(:db), :begin_time => Time.parse("4:00pm"), :end_time => Time.parse("9:00pm"), 
           :website_url => "http://www.pressofatlanticcity.com/communities/atlantic-city_pleasantville_brigantine/atlantic-city-multicultural-festival-planned-for-june/article_57fb090e-7e07-11e1-9632-001a4bcf887a.html", :price => 0.00, :admission_type => "cover", :private_event => false, :published => true, 
-          :pub_date => (Time.new(2012,04,23) - 1.week).to_s(:db), :notes => "", 
+          :pub_date => (Time.new(2012,04,23)).to_s(:db), :notes => "", 
           :address => {:first_line => "The Kennedy Plaza", :second_line => "Mississippi Ave at The Boardwalk", :city => "Atlantic City", :state => "NJ", :country => "United States"}},
           
           {:venue_name => "Sunday Jazz Brunch", :date => Time.new(2012,05,13).to_s(:db), :begin_time => Time.parse("11:00am"), :end_time => Time.parse("3:00pm"), 
           :website_url => "http://www.sundayjazzbrunch.net/", :price => 25.00, :admission_type => "ticket", :private_event => false, :published => true, 
-          :pub_date => (Time.new(2012,04,23) - 1.week).to_s(:db), :notes => "Special Mother's Day Event.", 
+          :pub_date => (Time.new(2012,04,23)).to_s(:db), :notes => "Special Mother's Day Event.", 
           :address => {:first_line => "Sheraton BWI Hotel", :second_line => "1100 Old Elkridge Landing Road", :city => "Linthicum Heights", :state => "MD", :country => "United States"}},
           
           {:venue_name => "National Sales Network", :date => Time.new(2012,04,19).to_s(:db), :begin_time => Time.parse("6:00pm"), :end_time => Time.parse("9:00pm"), 
