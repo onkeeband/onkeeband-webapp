@@ -3,6 +3,7 @@
 		%p.weekday-name= event.date.to_time.to_s(:weekday_name)
 		%p.month-name= event.date.to_time.to_s(:month_name)
 		%p.day-of-month= event.date.day.ordinalize
+		%p.year= event.date.year if event.date.year < Time.now.year
 		%p.time-interval
 			%span.begin-time= event.begin_time.to_s(:event_time)
 			%span -
