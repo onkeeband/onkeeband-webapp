@@ -503,9 +503,12 @@ img.matted-photo {
 	ol.listing-box {width: 500px; margin-right: 275px; float: right;}
 	p.admin a {margin-right: 10px; text-transform: uppercase;}
 	nav.pagination {
-		clear: both; width: 500px; margin-right: 275px; float: right; font-size: 1.3em;
-	 	> span {float: left; line-height: 10px; padding: 0 10px;}
-		.current {color: #ffeecc; font-size: 1.5em;;}
+		clear: both; margin-left: 170px; padding: 0 50px; float: center; font-size: 1.3em;
+	 	> span {float: left;}
+		.current {width: 80px; text-align: center; margin-top: 5px; padding: 0;  color: #ffeecc; font-size: 1.9em;; font-weight: bold;}
+		.current, .page, .first, .prev, .next, .last {
+			a {padding: 5px; width: 70px; margin: 0;}
+		}
 	}
 }
 
