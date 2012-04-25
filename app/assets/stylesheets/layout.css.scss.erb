@@ -501,14 +501,18 @@ img.matted-photo {
 	a {color: #888; text-decoration: none;}
 	a:hover {color: #ffcc33;}
 	a.plus-button {position: absolute; top: 0px; right: 70px; font-size: 5em; font-weight: bold; }
-	ol.listing-box {width: 500px; margin-right: 275px; float: right;}
+	ol.listing-box {width: 500px; margin-left: 275px; float: left;}
 	p.admin a {margin-right: 10px; text-transform: uppercase;}
 	nav.pagination {
-		clear: both; margin-left: 170px; padding: 0 50px; float: center; font-size: 1.3em;
+		clear: both; margin-left: 275px; padding: 0 50px; float: left; font-size: 1.3em;
 	 	> span {float: left;}
-		.current {width: 80px; text-align: center; margin-top: 5px; padding: 0;  color: #ffeecc; font-size: 1.9em;; font-weight: bold;}
-		.current, .page, .first, .prev, .next, .last {
-			a {padding: 5px; width: 70px; margin: 0;}
+		.current {text-align: center; color: #eee; font-weight: bold; font-size: 1.5em;}
+		.first, .prev, .next, .last {
+			a {padding: 0px 5px; margin: 0; width: 70px;}
+		}
+		.current, .page, {
+			width: 30px; 
+			a {width: 30px; padding: 0; margin: 0;}
 		}
 	}
 }
