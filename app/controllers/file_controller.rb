@@ -1,22 +1,12 @@
 class FileController < ActionController::Base
   
   def vcard
-    @person = params[:band_member]
+    @card = params[:card]
     
-    if @person == "anita"
+    if @card == "anita"
       send_file File.join(Rails.root, 'public', 'docs', 'onkeeband-anita.vcf'), :type => "text/vcard"
-    elsif @person == "lenny"
+    elsif @card == "lenny"
       send_file File.join(Rails.root, 'public', 'docs', 'onkeeband-lenny.vcf'), :type => "text/vcard"
-    end
-  end
-  
-  def promo_pkg
-    @format = params[:doc_format]
-    
-    if @format == "doc"
-      send_file File.join(Rails.root, 'public', 'docs', 'onkeeband-promo-pkg.doc'), :type => "application/msword"
-    elsif @format == "pdf"
-      send_file File.join(Rails.root, 'public', 'docs', 'onkeeband-promo-pkg.pdf'), :type => "text/pdf"
     end
   end
   
