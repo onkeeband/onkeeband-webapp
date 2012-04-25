@@ -498,21 +498,22 @@ img.matted-photo {
 
 /*EVENTS*/
 .events #content {
-	a {color: #888; text-decoration: none;}
+	a {color: #aaa; text-decoration: none;}
 	a:hover {color: #ffcc33;}
 	a.plus-button {position: absolute; top: 0px; right: 70px; font-size: 5em; font-weight: bold; }
 	ol.listing-box {width: 500px; margin-left: 275px; float: left;}
 	p.admin a {margin-right: 10px; text-transform: uppercase;}
 	nav.pagination {
-		clear: both; margin-left: 275px; padding: 0 50px; float: left; font-size: 1.3em;
+		clear: both; margin: 10px 0px 0px 255px; padding: 0; float: left; font-size: 1.3em;
 	 	> span {float: left;}
-		.current {text-align: center; color: #eee; font-weight: bold; font-size: 1.5em;}
+		> span:first-child.current {display: block; margin-left: 150px;}
+		.current, .gap {text-align: center; color: #fff; font-weight: bold; font-size: 1.5em;}
 		.first, .prev, .next, .last {
-			a {padding: 0px 5px; margin: 0; width: 70px;}
+			a {margin: 0; padding: 0px 5px; width: 65px;}
 		}
 		.current, .page, {
 			width: 30px; 
-			a {width: 30px; padding: 0; margin: 0;}
+			a {width: 30px;}
 		}
 	}
 }
