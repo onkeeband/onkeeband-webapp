@@ -8,10 +8,9 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOID_URI'] %>
-  # host: localhost
-  # port: 27418
-  # database: onkeeband_production
+  host: localhost
+  port: 27418
+  database: onkeeband_production
   # host: <%= ENV['MONGOID_HOST'] %>
   # port: <%= ENV['MONGOID_PORT'] %>
   # database: <%= ENV['MONGOID_DATABASE'] %>
