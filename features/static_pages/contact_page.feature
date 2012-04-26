@@ -18,4 +18,3 @@ Feature:  Contact Page
 		| name 		    | title 				| email 			  | phone		   |
 		| Lenny McLean  | Founder / Band Leader | lenny@onkeeband.com | (508) 740-2470 |
 		| Anita Truitt  | Executive Manager	    | anita@onkeeband.com | (443) 827-1693 |
-		| David Romaine | Manager 				| david@onkeeband.com | (201) 218-0743 |

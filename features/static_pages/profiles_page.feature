@@ -21,7 +21,6 @@ Feature:  Profile Page
 		| name		    			 | title 				  | profile_path 		    | profile_tab	   		|	
 		| Lenny McLean  			 | Founder / Band Leader  | /management/lenny 	    | Band Management 	 	|
 		| Anita Truitt  			 | Executive Manager	  | /management/anita 	    | Band Management 	 	|
-		| David Romaine 			 | Manager 				  | /profiles		 	    | Band Management 	 	|
 		| Aubrey McKoy  			 | Bass Guitarist		  | /washington-dc/aubrey   | Washington D.C. Band 	|
 		| Cornell Webb    			 | Drummer				  | /washington-dc/cornell  | Washington D.C. Band 	|
 		| Ralph "Rhube" Peters  	 | Saxophone			  | /washington-dc/rhube    | Washington D.C. Band 	|
@@ -33,7 +32,6 @@ Feature:  Profile Page
 		| Carl Parks				 | Percussionist		  | /profiles			    | Boston Band 		 	|
 		| Lenny McLean			     | Composer / Keyboardist | /boston/lenny  		    | Boston Band 		 	|
 		| Michael Smith				 | Featured Guest		  | /profiles				| Featured Guest		|
-		| Steve "The Truth" Williams | Featured Guest		  | /featured-guest/steve   | Featured Guest		|
 		| Rodney Kelley Sr.			 | Featured Guest		  | /profiles				| Featured Guest		|
 		| Lori Dow					 | Featured Guest		  | /profiles			    | Featured Guest		|
 		
