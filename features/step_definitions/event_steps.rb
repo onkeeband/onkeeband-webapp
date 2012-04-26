@@ -71,7 +71,7 @@ end
 
 Then /^there should still be an event listed$/ do
   Event.count.should > 0
-  step %{I should see "Remove"}
+  step %{I should see "Delete"}
 end
 
 

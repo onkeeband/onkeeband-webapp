@@ -13,11 +13,11 @@ Feature:  Delete Event
 	Scenario: Remove an Event
 		When I go the the events page
 			And preemptively accept confirmation alert
-			And click on "Remove"
+			And click on "Delete"
 		Then I should see "Event has been removed"
 	
-	Scenario: Mistakenly press "Remove" link for an event
+	Scenario: Mistakenly press "Delete" link for an event
 		When I go the the events page
 			And preemptively decline confirmation alert
-			And click on "Remove"
+			And click on "Delete"
 		Then there should still be an event listed

@@ -13,7 +13,7 @@ Feature:  Adding Events
 	Scenario: Add a public event
 		Given there are currently no events
 		When I go the the events page
-			And click on "Add Show"
+			And click on "+"
 			And enter the following information for the event			
 				| venue 	  	 | PlaceA											    |
 				| date		  	 | Time.parse("March 19th, 2013, 7:30 pm").to_s(:db)  	|
@@ -31,7 +31,7 @@ Feature:  Adding Events
 	@private_event
 	Scenario: Add a private event w/o address or event times
 		When I go the the events page
-			And click on "Add Show"
+			And click on "+"
 			And enter valid information for a private event
 			And press "Save"
 		Then I should see that the Event has been added
@@ -40,7 +40,7 @@ Feature:  Adding Events
 	Scenario: Don't allow a blank form to pass validation
 		Given there are currently no events
 		When I go the the events page
-			And click on "Add Show"
+			And click on "+"
 			And press "Save"
 		Then I should see "can't be blank"
 		
