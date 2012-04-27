@@ -1,4 +1,4 @@
-// = require google_analytics
+// = require google_analytics.js.erb
 // = require jquery
 // = require jquery_ujs
 // = require jquery.ui.autocomplete
