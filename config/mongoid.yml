@@ -1,0 +1,39 @@
+development:
+  host: <%= ENV['MONGOID_HOST'] %>
+  database: <%= ENV['MONGOID_DATABASE'] %>
+  # host: localhost
+  # database: onkeeband_development
+
+test:
+  host: localhost
+  database: onkeeband_test
+
+# set these environment variables on your prod server
+production:
+  # host: localhost
+  # port: 27418
+  # database: onkeeband_production
+  host: <%= ENV['MONGOID_HOST'] %>
+  port: <%= ENV['MONGOID_PORT'] %>
+  database: <%= ENV['MONGOID_DATABASE'] %>
+  #username: <%= ENV['MONGOID_USERNAME'] %>
+  #password: <%= ENV['MONGOID_PASSWORD'] %>
+  
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
+
+
+# production:
+#   host: <%= ENV['MONGOID_HOST'] %>
+#   port: <%= ENV['MONGOID_PORT'] %>
+#   #username: <%= ENV['MONGOID_USERNAME'] %>
+#   #password: <%= ENV['MONGOID_PASSWORD'] %>
+#   database: <%= ENV['MONGOID_DATABASE'] %>
+#   # slaves:
+#   #   - host: slave1.local
+#   #     port: 27018
+#   #   - host: slave2.local
+#   #     port: 27019
