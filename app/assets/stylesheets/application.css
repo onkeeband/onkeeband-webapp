@@ -5,6 +5,7 @@
  *= require_self
  *= require reset
  *= require typography
+ *= require webfonts
  *= require forms
  *= require grid
  *= require layout
