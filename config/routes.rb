@@ -26,8 +26,6 @@ Onkeeband::Application.routes.draw do
     # Individual Bios Pages
     scope '/management' do
       get 'lenny'.parameterize  => 'pages#lenny'
-      get 'anita'.parameterize  => 'pages#anita'
-      get 'david'.parameterize  => 'pages#romaine'
     end
     
     scope '/washington-dc' do

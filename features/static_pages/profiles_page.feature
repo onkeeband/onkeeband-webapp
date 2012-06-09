@@ -1,17 +1,16 @@
 @static_pages @profiles_page
 Feature:  Profile Page
-	In order to find contact information about On Kee
+	In order to browse detailed information about an On Kee band member
 	As a user / visitor
-	I want to see the band booking information with the following:
-	name, position/title, email address, and phone number
+	I want to visit the individual profiles of each band member 
 	
-	Scenario:  View 1st level Profile Page
+	Scenario:  View Profiles page with profile groups
 		Given I am on the homepage
 		When I go to the profiles page
 		Then I should see "Profiles & Bios"
 	
 	@javascript
-	Scenario Outline:  Ensure Individual Profiles and URL Paths
+	Scenario Outline:  View Individual Profiles following unique URL Paths
 		When I go to the profiles page
 			And I click on tab `<profile_tab>` with profile `<name>`
 		Then I should see the individual's profile page containing the following info: `<name>` `<title>`
@@ -20,7 +19,6 @@ Feature:  Profile Page
 	Examples:
 		| name		    			 | title 				  | profile_path 		    | profile_tab	   		|	
 		| Lenny McLean  			 | Founder / Band Leader  | /management/lenny 	    | Band Management 	 	|
-		| Anita Truitt  			 | Executive Manager	  | /management/anita 	    | Band Management 	 	|
 		| Aubrey McKoy  			 | Bass Guitarist		  | /washington-dc/aubrey   | Washington D.C. Band 	|
 		| Cornell Webb    			 | Drummer				  | /washington-dc/cornell  | Washington D.C. Band 	|
 		| Ralph "Rhube" Peters  	 | Saxophone			  | /washington-dc/rhube    | Washington D.C. Band 	|
